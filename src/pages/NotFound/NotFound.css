@@ -1,0 +1,55 @@
+.nf{
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 80px 0;
+}
+
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nf__wrap{
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  border-radius: 22px;
+  padding: 34px 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+
+.nf__code{
+  margin: 0;
+  font-size: 64px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: rgba(0,240,255,0.95);
+}
+
+.nf__title{
+  margin: 8px 0 8px;
+  font-size: 28px;
+}
+
+.nf__sub{
+  margin: 0 auto 18px;
+  max-width: 70ch;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.72);
+}
+
+.nf__actions{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.nf__hint{
+  margin-top: 16px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}

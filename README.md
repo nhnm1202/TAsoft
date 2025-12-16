@@ -1,16 +1,53 @@
-# React + Vite
+https://fptsoftware.com/
+https://vinasoftware.com.vn/gioi-thieu
+https://www.microsoft.com/vi-vn/
+https://www.salesforce.com/ap/?ir=1
+https://www.ibm.com/us-en
+https://www.toptal.com/
+https://kms-technology.com/
+https://www.axonactive.com/
+https://kyanon.digital/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Sơ đồ
+TAsoft Website
+├─ Trang chủ (/)
+│  ├─ Hero + CTA
+│  ├─ Dịch vụ nổi bật (link /services/...)
+│  ├─ Dự án tiêu biểu (link /projects)
+│  ├─ Khách hàng/đối tác (preview)
+│  └─ Footer (Privacy/Terms)
+│
+├─ Services (Dropdown)
+│  ├─ Tất cả dịch vụ (/services)
+│  │  ├─ Danh sách dịch vụ
+│  │  └─ Card → đi vào trang chi tiết dịch vụ
+│  ├─ Phát triển Web (/services/phat-trien-website)
+│  │  ├─ Mô tả + lợi ích
+│  │  ├─ Tech stack gợi ý
+│  │  └─ CTA liên hệ
+│  ├─ Ứng dụng di động (/services/ung-dung-di-dong)
+│  ├─ Cơ sở dữ liệu (/services/co-so-du-lieu)
+│  └─ AI & Tự động hóa (/services/ai-tu-dong-hoa)
+│
+├─ Dự án (/projects)
+│  ├─ Bộ lọc (chip)
+│  ├─ Danh sách dự án (cards)
+│  └─ CTA cuối trang
+│
+├─ Resources (Dropdown)
+│  ├─ Dự án tiêu biểu (/projects)
+│  ├─ Blog (Coming soon) (/coming-soon/blog)
+│  ├─ Chính sách bảo mật (/privacy)
+│  └─ Điều khoản sử dụng (/terms)
+│
+├─ Company (Dropdown)
+│  ├─ Giới thiệu TAsoft (/about)
+│  └─ Khách hàng & đối tác (Coming soon) (/coming-soon/clients)
+│
+├─ Tuyển dụng
+│  └─ Careers (Coming soon) (/coming-soon/careers)
+│
+└─ Coming Soon (trang chung)
+   ├─ Blog (/coming-soon/blog)
+   ├─ Clients (/coming-soon/clients)
+   └─ Careers (/coming-soon/careers)

@@ -1,0 +1,24 @@
+.rp{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .12s ease;
+}
+
+.rp--show{
+  opacity: 1;
+}
+
+.rp__bar{
+  height: 100%;
+  width: 0%;
+  background: rgba(0,240,255,0.95);
+  box-shadow: 0 0 0 6px rgba(0,240,255,0.10);
+  border-radius: 999px;
+  transition: width .18s ease;
+}

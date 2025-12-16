@@ -1,69 +1,168 @@
-.banner {
+/* ===== Hero / Banner ===== */
+@keyframes bgFloat{
+  0%{ background-position: center; }
+  50%{ background-position: center 55%; }
+  100%{ background-position: center; }
+}
+.banner{
   width: 100%;
-  height: 76vh;
+  min-height: 78vh;
+  position: relative;
+
   background-size: cover;
   background-position: center;
-  position: relative;
+  background-repeat: no-repeat;
+  animation: bgFloat 14s ease-in-out infinite;
   display: flex;
   align-items: center;
-  justify-content: stretch;
 }
-
-.banner-overlay {
-  background: rgba(0, 0, 0, 0.55);
+.banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(0,240,255,0.10), transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(124,58,237,0.10), transparent 55%);
+  pointer-events:none;
+}
+/* Overlay */
+.banner-overlay{
   width: 100%;
-  height: 100%;
+  min-height: 78vh;             
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  padding: clamp(18px, 4vw, 36px);
+  position: relative; z-index: 1;
+  color: var(--text-dark);
+  /* background: #00F0FF; */
+}
+
+/* Content */
+.banner-content{
+  color: var(--text-dark);
+  width: min(70%, 880px);
+  margin: 0 auto;
+  padding: clamp(18px, 4vw, 32px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.14) 0%,
+      rgba(255,255,255,0.10) 45%,
+      rgba(255,255,255,0.14) 100%
+    );
+
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
   text-align: center;
-  padding: 20px;
 }
 
-.banner-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 15px;
+/* Title */
+.banner-title{
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
+  color: var(--text-dark);
 }
 
-.banner-subtitle {
-  font-size: 22px;
-  margin-bottom: 30px;
+.banner .banner-title span{
+  background: var(--gradient-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: inherit;
 }
 
-.banner-buttons {
+/* Subtitle */
+.banner .banner-subtitle{
+  max-width: 720px;
+  margin: 0 auto 36px;
+  font-style: italic;
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: var(--muted-dark);
+  line-height: 1.8;
+}
+
+/* Buttons */
+/* Buttons (professional) */
+.banner-buttons{
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  flex-wrap: wrap;        
 }
 
-.btn-primary,
-.btn-secondary {
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.25s;
+/* CTA button trong banner */
+.banner-buttons .btn{
+  min-width: 160px;
+  padding: 12px 22px;
+  border-radius: var(--radius-md);
+    box-shadow: 0 0 0 8px rgba(0,240,255,0.10);
+  background: var(--gradient-neon);       
 }
 
-.btn-primary {
-  background: #0aa1ff;
-  color: white;
+
+.banner-buttons .btn-gradient{
+  color: var(--text-dark);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease);
+}
+.banner-buttons .btn-gradient {
+  color: var(--text-dark);
+  width: 30%;
+  margin: 0 auto;
+}
+.banner-buttons .btn-gradient:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  filter: saturate(1.05);
+  background-color: black;
+  color: var(--text);
 }
 
-.btn-primary:hover {
-  background: #0077cc;
+/* Focus rõ ràng (ăn điểm) */
+.banner-buttons .btn:focus-visible{
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
 }
 
-.btn-secondary {
-  border: 2px solid white;
-  color: white;
+/* Mobile: nút full width đẹp */
+@media (max-width: 768px){
+  .banner-buttons{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .banner-buttons .btn{
+    width: 100%;
+    max-width: 280px;
+  }
 }
 
-.btn-secondary:hover {
-  background: white;
-  color: #222;
+
+/* Responsive */
+@media (max-width: 768px){
+  .banner{
+    min-height: 70vh;
+  }
+
+  .banner-buttons{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-buttons .btn{
+    width: 100%;
+    max-width: 260px;
+  }
+  .banner-content{ width: 100%;
+}
+
 }
