@@ -50,7 +50,7 @@ const Header = () => {
                             aria-expanded={openDropdown === "services"}
                             onClick={() => toggleDropdown("services")}
                         >
-                            Services <span className={`chev ${openDropdown === "services" ? "up" : ""}`} aria-hidden="true">▾</span>
+                            Dịch vụ <span className={`chev ${openDropdown === "services" ? "up" : ""}`} aria-hidden="true">▾</span>
                         </button>
 
                         <div className={`menu ${openDropdown === "services" ? "open" : ""}`} role="menu">
@@ -94,7 +94,7 @@ const Header = () => {
                             aria-expanded={openDropdown === "resources"}
                             onClick={() => toggleDropdown("resources")}
                         >
-                            Resources <span className={`chev ${openDropdown === "resources" ? "up" : ""}`} aria-hidden="true">▾</span>
+                            Tài nguyên <span className={`chev ${openDropdown === "resources" ? "up" : ""}`} aria-hidden="true">▾</span>
                         </button>
 
                         <div className={`menu ${openDropdown === "resources" ? "open" : ""}`} role="menu">
@@ -129,7 +129,7 @@ const Header = () => {
                             aria-expanded={openDropdown === "company"}
                             onClick={() => toggleDropdown("company")}
                         >
-                            Company <span className={`chev ${openDropdown === "company" ? "up" : ""}`} aria-hidden="true">▾</span>
+                            Công ty <span className={`chev ${openDropdown === "company" ? "up" : ""}`} aria-hidden="true">▾</span>
                         </button>
 
                         <div className={`menu ${openDropdown === "company" ? "open" : ""}`} role="menu">
